@@ -1,0 +1,131 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]rm/
+[Aa]rm64/
+
+# Visual Studio cache
+.vscode/
+*.VC.db
+*.VC.VC.opendb
+
+# Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+
+# NuGet
+*.nupkg
+*.snupkg
+**/packages/*
+!**/packages/build/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Core
+wwwroot/lib/
+
+# Entity Framework
+*.db
+*.db-shm
+*.db-wal
+
+# User secrets
+secrets.json
+appsettings.Local.json
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+Log/
+
+# Database files
+*.mdf
+*.ldf
+*.ndf
+
+# Azure
+.azure/
+
+# Docker
+docker-compose.override.yml
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage
+coverage/
+TestResults/
+*.coverage
+*.coveragexml
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Publish output
+publish/
+*.Publish.xml
+*.pubxml.user
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.orig
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Windows thumbnail cache
+Thumbs.db:encryptable
+
+# Visual Studio Code
+.history/
+
+# Generated documentation
+*.generated.cs
+
+# Certificate files
+*.pfx
+*.p12
+
+# Local configuration
+appsettings.Development.local.json
+appsettings.Production.local.json
+
+# User-specific uploads
+wwwroot/uploads/
+wwwroot/images/uploads/
+
+# Backup files
+*.backup
+*.old
