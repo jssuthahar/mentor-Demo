@@ -1,0 +1,203 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = "_Layout";
+}
+
+<div class="account-page">
+
+    <div class="account-card">
+
+        <!-- Logo -->
+        <div class="account-logo">
+            <span class="account-logo-icon">M</span>
+            <span>Mentor<span>App</span></span>
+        </div>
+
+        <div class="account-header">
+            <h1>Welcome back</h1>
+            <p>Sign in to continue your mentoring journey.</p>
+        </div>
+
+        <!-- Login Form -->
+        <form asp-controller="Account"
+              asp-action="Login"
+              method="post">
+
+            <!-- Email -->
+            <div class="form-group">
+
+                <label for="Email">
+                    Email Address
+                </label>
+
+                <div class="input-wrapper">
+
+                    <i class="bi bi-envelope"></i>
+
+                    <input type="email"
+                           id="Email"
+                           name="Email"
+                           placeholder="Enter your email"
+                           autocomplete="email"
+                           required />
+
+                </div>
+
+            </div>
+
+
+            <!-- Password -->
+            <div class="form-group">
+
+                <div class="label-row">
+
+                    <label for="Password">
+                        Password
+                    </label>
+
+                    <a asp-controller="Account"
+                       asp-action="ForgotPassword">
+                        Forgot password?
+                    </a>
+
+                </div>
+
+                <div class="input-wrapper">
+
+                    <i class="bi bi-lock"></i>
+
+                    <input type="password"
+                           id="Password"
+                           name="Password"
+                           placeholder="Enter your password"
+                           autocomplete="current-password"
+                           required />
+
+                    <button type="button"
+                            class="password-toggle"
+                            onclick="togglePassword('Password', this)">
+
+                        <i class="bi bi-eye"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Remember -->
+            <div class="remember-row">
+
+                <label class="remember-check">
+
+                    <input type="checkbox"
+                           name="RememberMe" />
+
+                    <span>
+                        Remember me
+                    </span>
+
+                </label>
+
+            </div>
+
+
+            <!-- Login -->
+            <button type="submit"
+                    class="account-primary-btn">
+
+                Sign In
+
+                <i class="bi bi-arrow-right"></i>
+
+            </button>
+
+        </form>
+
+
+        <!-- Divider -->
+        <div class="account-divider">
+
+            <span>OR CONTINUE WITH</span>
+
+        </div>
+
+
+        <!-- Social Login -->
+        <div class="social-login">
+
+            <button type="button"
+                    class="social-btn">
+
+                <span class="google-icon">G</span>
+
+                Google
+
+            </button>
+
+
+            <button type="button"
+                    class="social-btn">
+
+                <i class="bi bi-facebook facebook-icon"></i>
+
+                Facebook
+
+            </button>
+
+        </div>
+
+
+        <!-- Register -->
+        <div class="account-footer">
+
+            Don't have an account?
+
+            <a asp-controller="Account"
+               asp-action="Register">
+
+                Create an account
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+@section Scripts {
+
+    <script>
+
+        function togglePassword(inputId, button) {
+
+            const input = document.getElementById(inputId);
+
+            const icon = button.querySelector("i");
+
+            if (input.type === "password") {
+
+                input.type = "text";
+
+                icon.classList.remove("bi-eye");
+
+                icon.classList.add("bi-eye-slash");
+
+            }
+            else {
+
+                input.type = "password";
+
+                icon.classList.remove("bi-eye-slash");
+
+                icon.classList.add("bi-eye");
+
+            }
+        }
+
+    </script>
+
+}

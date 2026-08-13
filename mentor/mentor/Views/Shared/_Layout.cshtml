@@ -14,24 +14,43 @@
 
     <title>@title - MentorApp</title>
 
+
+    <!-- Bootstrap -->
+
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+
+
+    <!-- Bootstrap Icons -->
 
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
+
+    <!-- Application CSS -->
+
     <link rel="stylesheet"
-          href="~/css/site.css" />
+          href="~/css/site.css"
+          asp-append-version="true" />
+
+    <link rel="stylesheet"
+          href="~/css/account.css"
+          asp-append-version="true" />
 
 </head>
 
+
 <body>
 
-    <!-- Navbar -->
+
+    <!-- ==========================================
+         NAVBAR
+         ========================================== -->
 
     <nav class="navbar navbar-expand-lg mentor-navbar">
 
         <div class="container">
+
 
             <!-- Logo -->
 
@@ -50,12 +69,15 @@
             </a>
 
 
-            <!-- Mobile Button -->
+            <!-- Mobile Menu Button -->
 
             <button class="navbar-toggler"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#mainNavbar">
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
 
                 <span class="navbar-toggler-icon"></span>
 
@@ -67,11 +89,17 @@
             <div class="collapse navbar-collapse"
                  id="mainNavbar">
 
+
+                <!-- Main Menu -->
+
                 <ul class="navbar-nav mx-auto">
+
+
+                    <!-- Home -->
 
                     <li class="nav-item">
 
-                        <a class="nav-link active"
+                        <a class="nav-link"
                            asp-controller="Home"
                            asp-action="Index">
 
@@ -81,6 +109,8 @@
 
                     </li>
 
+
+                    <!-- Find Mentor -->
 
                     <li class="nav-item">
 
@@ -95,124 +125,215 @@
                     </li>
 
 
-                    <li class="nav-item">
+                    <!-- Appointments -->
 
-                        <a class="nav-link"
-                           asp-controller="Appointment"
-                           asp-action="Index">
+                    @if (User.Identity?.IsAuthenticated == true)
+                    {
+                        <li class="nav-item">
 
-                            Appointments
+                            <a class="nav-link"
+                               asp-controller="Appointment"
+                               asp-action="Index">
 
-                        </a>
+                                Appointments
 
-                    </li>
+                            </a>
+
+                        </li>
+                    }
+
 
                 </ul>
 
 
-                <!-- Right Menu -->
+                <!-- ==========================================
+                     ACCOUNT SECTION
+                     ========================================== -->
 
                 <div class="d-flex align-items-center gap-2">
 
-                    <!-- Notification -->
 
-                    <button class="btn notification-btn">
+                    @if (User.Identity?.IsAuthenticated == true)
+                    {
 
-                        <i class="bi bi-bell"></i>
+                        <!-- ==================================
+                             NOTIFICATION
+                             ================================== -->
 
-                        <span class="notification-dot"></span>
-
-                    </button>
-
-
-                    <!-- Profile -->
-
-                    <div class="dropdown">
-
-                        <button class="btn profile-menu dropdown-toggle"
+                        <button class="btn notification-btn"
                                 type="button"
-                                data-bs-toggle="dropdown">
+                                title="Notifications">
 
-                            <span class="user-avatar">
-                                SU
-                            </span>
+                            <i class="bi bi-bell"></i>
 
-                            <span class="d-none d-lg-inline">
-                                Suthahar
-                            </span>
+                            <span class="notification-dot"></span>
 
                         </button>
 
 
-                        <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                        <!-- ==================================
+                             PROFILE DROPDOWN
+                             ================================== -->
 
-                            <li>
-
-                                <a class="dropdown-item"
-                                   asp-controller="Profile"
-                                   asp-action="Index">
-
-                                    <i class="bi bi-person me-2"></i>
-
-                                    My Profile
-
-                                </a>
-
-                            </li>
+                        <div class="dropdown">
 
 
-                            <li>
-
-                                <a class="dropdown-item"
-                                   asp-controller="Profile"
-                                   asp-action="Edit">
-
-                                    <i class="bi bi-pencil me-2"></i>
-
-                                    Edit Profile
-
-                                </a>
-
-                            </li>
+                            <button class="btn profile-menu dropdown-toggle"
+                                    type="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false">
 
 
-                            <li>
+                                <!-- User Avatar -->
 
-                                <a class="dropdown-item"
-                                   asp-controller="Mentor"
-                                   asp-action="BecomeMentor">
+                                <span class="user-avatar">
 
-                                    <i class="bi bi-person-plus me-2"></i>
+                                    @(
+                                        !string.IsNullOrEmpty(User.Identity?.Name)
+                                            ? User.Identity.Name.Substring(0, 1).ToUpper()
+                                            : "U"
+                                    )
 
-                                    Become a Mentor
-
-                                </a>
-
-                            </li>
+                                </span>
 
 
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
+                                <!-- User Name -->
+
+                                <span class="d-none d-lg-inline">
+
+                                    @User.Identity?.Name
+
+                                </span>
 
 
-                            <li>
+                            </button>
 
-                                <a class="dropdown-item text-danger"
-                                   asp-controller="Account"
-                                   asp-action="Logout">
 
-                                    <i class="bi bi-box-arrow-right me-2"></i>
+                            <!-- Dropdown -->
 
-                                    Logout
+                            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
 
-                                </a>
 
-                            </li>
+                                <!-- My Profile -->
 
-                        </ul>
+                                <li>
 
-                    </div>
+                                    <a class="dropdown-item"
+                                       asp-controller="Profile"
+                                       asp-action="Index">
+
+                                        <i class="bi bi-person me-2"></i>
+
+                                        My Profile
+
+                                    </a>
+
+                                </li>
+
+
+                                <!-- Edit Profile -->
+
+                                <li>
+
+                                    <a class="dropdown-item"
+                                       asp-controller="Profile"
+                                       asp-action="Edit">
+
+                                        <i class="bi bi-pencil me-2"></i>
+
+                                        Edit Profile
+
+                                    </a>
+
+                                </li>
+
+
+                                <!-- Become Mentor -->
+
+                                <li>
+
+                                    <a class="dropdown-item"
+                                       asp-controller="Mentor"
+                                       asp-action="BecomeMentor">
+
+                                        <i class="bi bi-person-plus me-2"></i>
+
+                                        Become a Mentor
+
+                                    </a>
+
+                                </li>
+
+
+                                <!-- Divider -->
+
+                                <li>
+
+                                    <hr class="dropdown-divider" />
+
+                                </li>
+
+
+                                <!-- Logout -->
+
+                                <li>
+
+                                    <form asp-controller="Account"
+                                          asp-action="Logout"
+                                          method="post">
+
+                                        <button type="submit"
+                                                class="dropdown-item text-danger">
+
+                                            <i class="bi bi-box-arrow-right me-2"></i>
+
+                                            Logout
+
+                                        </button>
+
+                                    </form>
+
+                                </li>
+
+
+                            </ul>
+
+                        </div>
+
+                    }
+
+                    else
+                    {
+
+                        <!-- ==================================
+                             LOGIN
+                             ================================== -->
+
+                        <a asp-controller="Account"
+                           asp-action="Login"
+                           class="layout-login-btn">
+
+                            Login
+
+                        </a>
+
+
+                        <!-- ==================================
+                             REGISTER
+                             ================================== -->
+
+                        <a asp-controller="Account"
+                           asp-action="Register"
+                           class="layout-register-btn">
+
+                            Create Account
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    }
+
 
                 </div>
 
@@ -223,7 +344,9 @@
     </nav>
 
 
-    <!-- Main Content -->
+    <!-- ==========================================
+         MAIN CONTENT
+         ========================================== -->
 
     <main>
 
@@ -232,13 +355,19 @@
     </main>
 
 
-    <!-- Footer -->
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
 
     <footer class="mentor-footer">
 
         <div class="container">
 
+
             <div class="row gy-4">
+
+
+                <!-- Brand -->
 
                 <div class="col-lg-5">
 
@@ -248,9 +377,12 @@
                             M
                         </span>
 
-                        MentorApp
+                        <span>
+                            MentorApp
+                        </span>
 
                     </div>
+
 
                     <p class="footer-description">
 
@@ -262,40 +394,184 @@
                 </div>
 
 
-                <div class="col-lg-2">
+                <!-- Platform -->
+
+                <div class="col-6 col-lg-2">
 
                     <h6>
                         Platform
                     </h6>
 
-                    <a href="#">
+
+                    <a asp-controller="Mentor"
+                       asp-action="Index">
+
                         Find Mentor
+
                     </a>
 
-                    <a href="#">
-                        Appointments
-                    </a>
 
-                    <a href="#">
+                    @if (User.Identity?.IsAuthenticated == true)
+                    {
+                        <a asp-controller="Appointment"
+                           asp-action="Index">
+
+                            Appointments
+
+                        </a>
+                    }
+
+
+                    <a asp-controller="Mentor"
+                       asp-action="BecomeMentor">
+
                         Become a Mentor
+
                     </a>
 
                 </div>
 
 
-                <div class="col-lg-2">
+                <!-- Account -->
+
+                <div class="col-6 col-lg-2">
 
                     <h6>
                         Account
                     </h6>
 
-                    <a href="#">
-                        Profile
-                    </a>
+
+                    @if (User.Identity?.IsAuthenticated == true)
+                    {
+
+                        <a asp-controller="Profile"
+                           asp-action="Index">
+
+                            Profile
+
+                        </a>
+
+
+                        <a asp-controller="Profile"
+                           asp-action="Edit">
+
+                            Edit Profile
+
+                        </a>
+
+                    }
+                    else
+                    {
+
+                        <a asp-controller="Account"
+                           asp-action="Login">
+
+                            Login
+
+                        </a>
+
+
+                        <a asp-controller="Account"
+                           asp-action="Register">
+
+                            Create Account
+
+                        </a>
+
+
+                        <a asp-controller="Account"
+                           asp-action="ForgotPassword">
+
+                            Forgot Password
+
+                        </a>
+
+                    }
+
+                </div>
+
+
+                <!-- Social -->
+
+                <div class="col-lg-3">
+
+                    <h6>
+                        Follow Us
+                    </h6>
+
+
+                    <div class="social-links">
+
+
+                        <a href="#"
+                           aria-label="LinkedIn">
+
+                            <i class="bi bi-linkedin"></i>
+
+                        </a>
+
+
+                        <a href="#"
+                           aria-label="Facebook">
+
+                            <i class="bi bi-facebook"></i>
+
+                        </a>
+
+
+                        <a href="#"
+                           aria-label="Twitter">
+
+                            <i class="bi bi-twitter-x"></i>
+
+                        </a>
+
+
+                        <a href="#"
+                           aria-label="Instagram">
+
+                            <i class="bi bi-instagram"></i>
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Divider -->
+
+            <hr />
+
+
+            <!-- Bottom -->
+
+            <div class="footer-bottom">
+
+
+                <span>
+
+                    © 2026 MentorApp.
+                    All rights reserved.
+
+                </span>
+
+
+                <div>
 
                     <a href="#">
-                        Settings
+                        Privacy
                     </a>
+
+
+                    <a href="#">
+                        Terms
+                    </a>
+
 
                     <a href="#">
                         Help
@@ -304,64 +580,26 @@
                 </div>
 
 
-                <div class="col-lg-3">
-
-                    <h6>
-                        Follow Us
-                    </h6>
-
-                    <div class="social-links">
-
-                        <a href="#">
-                            <i class="bi bi-linkedin"></i>
-                        </a>
-
-                        <a href="#">
-                            <i class="bi bi-facebook"></i>
-                        </a>
-
-                        <a href="#">
-                            <i class="bi bi-twitter-x"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
             </div>
 
-
-            <hr />
-
-
-            <div class="footer-bottom">
-
-                <span>
-                    © 2026 MentorApp. All rights reserved.
-                </span>
-
-                <div>
-
-                    <a href="#">
-                        Privacy
-                    </a>
-
-                    <a href="#">
-                        Terms
-                    </a>
-
-                </div>
-
-            </div>
 
         </div>
 
     </footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- ==========================================
+         BOOTSTRAP JS
+         ========================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Page Scripts -->
 
     @await RenderSectionAsync("Scripts", required: false)
+
 
 </body>
 

@@ -1,0 +1,342 @@
+﻿@{
+    ViewData["Title"] = "Create Account";
+    Layout = "_Layout";
+}
+
+<div class="account-page">
+
+    <div class="account-card register-card">
+
+        <!-- Logo -->
+        <div class="account-logo">
+
+            <span class="account-logo-icon">
+                M
+            </span>
+
+            <span>
+                Mentor<span>App</span>
+            </span>
+
+        </div>
+
+
+        <div class="account-header">
+
+            <h1>Create your account</h1>
+
+            <p>
+                Join MentorApp and start learning from experts.
+            </p>
+
+        </div>
+
+
+        <!-- Register Form -->
+
+        <form asp-controller="Account"
+              asp-action="Register"
+              method="post">
+
+
+            <!-- Name -->
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="FirstName">
+                        First Name
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i class="bi bi-person"></i>
+
+                        <input type="text"
+                               id="FirstName"
+                               name="FirstName"
+                               placeholder="First name"
+                               required />
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="LastName">
+                        Last Name
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i class="bi bi-person"></i>
+
+                        <input type="text"
+                               id="LastName"
+                               name="LastName"
+                               placeholder="Last name"
+                               required />
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Email -->
+
+            <div class="form-group">
+
+                <label for="Email">
+                    Email Address
+                </label>
+
+                <div class="input-wrapper">
+
+                    <i class="bi bi-envelope"></i>
+
+                    <input type="email"
+                           id="Email"
+                           name="Email"
+                           placeholder="Enter your email"
+                           autocomplete="email"
+                           required />
+
+                </div>
+
+            </div>
+
+
+            <!-- Phone -->
+
+            <div class="form-group">
+
+                <label for="Phone">
+                    Phone Number
+                </label>
+
+                <div class="input-wrapper">
+
+                    <i class="bi bi-phone"></i>
+
+                    <input type="tel"
+                           id="Phone"
+                           name="Phone"
+                           placeholder="Enter your phone number" />
+
+                </div>
+
+            </div>
+
+
+            <!-- Password -->
+
+            <div class="form-group">
+
+                <label for="Password">
+                    Password
+                </label>
+
+                <div class="input-wrapper">
+
+                    <i class="bi bi-lock"></i>
+
+                    <input type="password"
+                           id="Password"
+                           name="Password"
+                           placeholder="Create a password"
+                           autocomplete="new-password"
+                           required />
+
+                    <button type="button"
+                            class="password-toggle"
+                            onclick="togglePassword('Password', this)">
+
+                        <i class="bi bi-eye"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="password-hint">
+
+                    <i class="bi bi-info-circle"></i>
+
+                    Use at least 8 characters with a number.
+
+                </div>
+
+            </div>
+
+
+            <!-- Confirm Password -->
+
+            <div class="form-group">
+
+                <label for="ConfirmPassword">
+                    Confirm Password
+                </label>
+
+                <div class="input-wrapper">
+
+                    <i class="bi bi-shield-lock"></i>
+
+                    <input type="password"
+                           id="ConfirmPassword"
+                           name="ConfirmPassword"
+                           placeholder="Confirm your password"
+                           autocomplete="new-password"
+                           required />
+
+                    <button type="button"
+                            class="password-toggle"
+                            onclick="togglePassword('ConfirmPassword', this)">
+
+                        <i class="bi bi-eye"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Terms -->
+
+            <div class="terms-row">
+
+                <label class="remember-check">
+
+                    <input type="checkbox"
+                           required />
+
+                    <span>
+
+                        I agree to the
+
+                        <a href="#">
+                            Terms of Service
+                        </a>
+
+                        and
+
+                        <a href="#">
+                            Privacy Policy
+                        </a>
+
+                    </span>
+
+                </label>
+
+            </div>
+
+
+            <!-- Create Account -->
+
+            <button type="submit"
+                    class="account-primary-btn">
+
+                Create Account
+
+                <i class="bi bi-arrow-right"></i>
+
+            </button>
+
+        </form>
+
+
+        <!-- Divider -->
+
+        <div class="account-divider">
+
+            <span>OR SIGN UP WITH</span>
+
+        </div>
+
+
+        <!-- Social -->
+
+        <div class="social-login">
+
+            <button type="button"
+                    class="social-btn">
+
+                <span class="google-icon">
+                    G
+                </span>
+
+                Google
+
+            </button>
+
+
+            <button type="button"
+                    class="social-btn">
+
+                <i class="bi bi-facebook facebook-icon"></i>
+
+                Facebook
+
+            </button>
+
+        </div>
+
+
+        <!-- Login -->
+
+        <div class="account-footer">
+
+            Already have an account?
+
+            <a asp-controller="Account"
+               asp-action="Login">
+
+                Sign in
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+@section Scripts {
+
+    <script>
+
+        function togglePassword(inputId, button) {
+
+            const input = document.getElementById(inputId);
+
+            const icon = button.querySelector("i");
+
+            if (input.type === "password") {
+
+                input.type = "text";
+
+                icon.classList.remove("bi-eye");
+
+                icon.classList.add("bi-eye-slash");
+
+            }
+            else {
+
+                input.type = "password";
+
+                icon.classList.remove("bi-eye-slash");
+
+                icon.classList.add("bi-eye");
+
+            }
+
+        }
+
+    </script>
+
+}

@@ -1,0 +1,372 @@
+﻿/* ========================================
+   ACCOUNT PAGES
+   ======================================== */
+
+.account-page {
+    min-height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 55px 20px;
+    background: radial-gradient( circle at 10% 10%, #eff6ff 0, transparent 30% ), radial-gradient( circle at 90% 90%, #eef2ff 0, transparent 30% ), #f8fafc;
+}
+
+
+.account-card {
+    width: 100%;
+    max-width: 460px;
+    padding: 42px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+
+.register-card {
+    max-width: 570px;
+}
+
+
+/* ========================================
+   LOGO
+   ======================================== */
+
+.account-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #0f172a;
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 28px;
+}
+
+    .account-logo > span:last-child > span {
+        color: #2563eb;
+    }
+
+.account-logo-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2563eb;
+    color: white;
+    border-radius: 11px;
+    font-weight: 800;
+}
+
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+.account-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .account-header h1 {
+        color: #0f172a;
+        font-size: 28px;
+        font-weight: 800;
+        margin-bottom: 8px;
+    }
+
+    .account-header p {
+        color: #64748b;
+        font-size: 14px;
+        margin: 0;
+    }
+
+
+/* ========================================
+   FORM
+   ======================================== */
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 19px;
+}
+
+    .form-group label {
+        display: block;
+        color: #334155;
+        font-size: 13px;
+        font-weight: 650;
+        margin-bottom: 7px;
+    }
+
+.label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .label-row a {
+        color: #2563eb;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+
+/* ========================================
+   INPUT
+   ======================================== */
+
+.input-wrapper {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    padding: 0 13px;
+    transition: 0.2s;
+}
+
+    .input-wrapper:focus-within {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    .input-wrapper > i {
+        width: 24px;
+        color: #94a3b8;
+        font-size: 16px;
+    }
+
+    .input-wrapper input {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        outline: 0;
+        background: transparent;
+        color: #0f172a;
+        font-size: 13px;
+    }
+
+        .input-wrapper input::placeholder {
+            color: #94a3b8;
+        }
+
+.password-toggle {
+    border: 0;
+    background: transparent;
+    color: #94a3b8;
+    padding: 5px;
+    cursor: pointer;
+}
+
+    .password-toggle:hover {
+        color: #2563eb;
+    }
+
+
+/* ========================================
+   PASSWORD HINT
+   ======================================== */
+
+.password-hint {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 6px;
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+
+/* ========================================
+   REMEMBER
+   ======================================== */
+
+.remember-row {
+    margin: 2px 0 20px;
+}
+
+.remember-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+    .remember-check input {
+        margin-top: 3px;
+        accent-color: #2563eb;
+    }
+
+
+/* ========================================
+   TERMS
+   ======================================== */
+
+.terms-row {
+    margin: 4px 0 20px;
+}
+
+    .terms-row a {
+        color: #2563eb;
+        font-weight: 600;
+    }
+
+
+/* ========================================
+   PRIMARY BUTTON
+   ======================================== */
+
+.account-primary-btn {
+    width: 100%;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 0;
+    border-radius: 9px;
+    background: #2563eb;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+    .account-primary-btn:hover {
+        background: #1d4ed8;
+        transform: translateY(-1px);
+        box-shadow: 0 7px 15px rgba(37, 99, 235, 0.2);
+    }
+
+
+/* ========================================
+   DIVIDER
+   ======================================== */
+
+.account-divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 27px 0 20px;
+}
+
+    .account-divider::before,
+    .account-divider::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: #e2e8f0;
+    }
+
+    .account-divider span {
+        color: #94a3b8;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+    }
+
+
+/* ========================================
+   SOCIAL LOGIN
+   ======================================== */
+
+.social-login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.social-btn {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    background: white;
+    color: #334155;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+    .social-btn:hover {
+        background: #f8fafc;
+        border-color: #cbd5e1;
+    }
+
+.google-icon {
+    font-size: 17px;
+    font-weight: 800;
+    color: #4285f4;
+}
+
+.facebook-icon {
+    color: #1877f2;
+    font-size: 17px;
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.account-footer {
+    text-align: center;
+    color: #64748b;
+    font-size: 12px;
+    margin-top: 27px;
+}
+
+    .account-footer a {
+        color: #2563eb;
+        font-weight: 700;
+    }
+
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 576px) {
+
+    .account-page {
+        padding: 30px 15px;
+    }
+
+    .account-card {
+        padding: 30px 22px;
+        border-radius: 15px;
+    }
+
+    .register-card {
+        max-width: 100%;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .account-header h1 {
+        font-size: 24px;
+    }
+
+    .social-login {
+        grid-template-columns: 1fr;
+    }
+}
