@@ -1,0 +1,1028 @@
+﻿@{
+    ViewData["Title"] = "Find a Mentor";
+}
+
+<div class="mentor-directory">
+
+    <!-- ==========================================
+         PAGE HEADER
+         ========================================== -->
+
+    <section class="mentor-page-header">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <span class="directory-label">
+                        MENTOR DIRECTORY
+                    </span>
+
+                    <h1>
+                        Find the right mentor
+                        <span>for you.</span>
+                    </h1>
+
+                    <p>
+                        Connect with experienced professionals,
+                        get personalized guidance, and grow your skills.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4 text-lg-end">
+
+                    <div class="mentor-count">
+
+                        <strong>500+</strong>
+
+                        <span>Mentors available</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         SEARCH
+         ========================================== -->
+
+    <section class="mentor-search-section">
+
+        <div class="container">
+
+            <div class="mentor-search-box">
+
+                <div class="mentor-search-input">
+
+                    <i class="bi bi-search"></i>
+
+                    <input type="text"
+                           placeholder="Search by name, skill, technology or role..." />
+
+                </div>
+
+
+                <button class="mentor-search-button">
+
+                    Search
+
+                    <i class="bi bi-search"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- Popular Searches -->
+
+            <div class="popular-mentor-search">
+
+                <span>Popular:</span>
+
+                <a href="#">C#</a>
+
+                <a href="#">.NET</a>
+
+                <a href="#">Azure</a>
+
+                <a href="#">SQL Server</a>
+
+                <a href="#">Python</a>
+
+                <a href="#">React</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         MAIN DIRECTORY
+         ========================================== -->
+
+    <section class="mentor-directory-content">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+
+                <!-- ==================================
+                     FILTER SIDEBAR
+                     ================================== -->
+
+                <div class="col-lg-3">
+
+                    <div class="mentor-filter-card">
+
+                        <div class="filter-header">
+
+                            <h3>
+                                Filters
+                            </h3>
+
+                            <button type="button">
+                                Clear all
+                            </button>
+
+                        </div>
+
+
+                        <hr />
+
+
+                        <!-- Availability -->
+
+                        <div class="filter-group">
+
+                            <h4>
+                                Availability
+                            </h4>
+
+                            <label class="filter-check">
+
+                                <input type="checkbox" />
+
+                                <span>
+                                    Available now
+                                </span>
+
+                                <small>
+                                    124
+                                </small>
+
+                            </label>
+
+
+                            <label class="filter-check">
+
+                                <input type="checkbox" />
+
+                                <span>
+                                    Available this week
+                                </span>
+
+                                <small>
+                                    286
+                                </small>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- Experience -->
+
+                        <div class="filter-group">
+
+                            <h4>
+                                Experience
+                            </h4>
+
+                            <label class="filter-check">
+
+                                <input type="checkbox" />
+
+                                <span>
+                                    1 - 3 Years
+                                </span>
+
+                            </label>
+
+
+                            <label class="filter-check">
+
+                                <input type="checkbox" />
+
+                                <span>
+                                    3 - 5 Years
+                                </span>
+
+                            </label>
+
+
+                            <label class="filter-check">
+
+                                <input type="checkbox" />
+
+                                <span>
+                                    5 - 10 Years
+                                </span>
+
+                            </label>
+
+
+                            <label class="filter-check">
+
+                                <input type="checkbox" />
+
+                                <span>
+                                    10+ Years
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- Skills -->
+
+                        <div class="filter-group">
+
+                            <h4>
+                                Skills
+                            </h4>
+
+                            <label class="filter-check">
+
+                                <input type="checkbox" />
+
+                                <span>
+                                    C#
+                                </span>
+
+                                <small>
+                                    120
+                                </small>
+
+                            </label>
+
+
+                            <label class="filter-check">
+
+                                <input type="checkbox" />
+
+                                <span>
+                                    .NET
+                                </span>
+
+                                <small>
+                                    98
+                                </small>
+
+                            </label>
+
+
+                            <label class="filter-check">
+
+                                <input type="checkbox" />
+
+                                <span>
+                                    Azure
+                                </span>
+
+                                <small>
+                                    86
+                                </small>
+
+                            </label>
+
+
+                            <label class="filter-check">
+
+                                <input type="checkbox" />
+
+                                <span>
+                                    SQL Server
+                                </span>
+
+                                <small>
+                                    75
+                                </small>
+
+                            </label>
+
+
+                            <label class="filter-check">
+
+                                <input type="checkbox" />
+
+                                <span>
+                                    Python
+                                </span>
+
+                                <small>
+                                    72
+                                </small>
+
+                            </label>
+
+
+                            <button class="show-more-filter">
+
+                                Show more
+
+                                <i class="bi bi-chevron-down"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- Rating -->
+
+                        <div class="filter-group">
+
+                            <h4>
+                                Rating
+                            </h4>
+
+                            <label class="filter-check">
+
+                                <input type="checkbox" />
+
+                                <span class="rating-filter">
+
+                                    <i class="bi bi-star-fill"></i>
+                                    4.5 & above
+
+                                </span>
+
+                            </label>
+
+
+                            <label class="filter-check">
+
+                                <input type="checkbox" />
+
+                                <span class="rating-filter">
+
+                                    <i class="bi bi-star-fill"></i>
+                                    4.0 & above
+
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==================================
+                     MENTOR RESULTS
+                     ================================== -->
+
+                <div class="col-lg-9">
+
+
+                    <!-- Result Header -->
+
+                    <div class="mentor-result-header">
+
+                        <div>
+
+                            <h2>
+                                Recommended Mentors
+                            </h2>
+
+                            <p>
+                                Showing 24 mentors matching your preferences
+                            </p>
+
+                        </div>
+
+
+                        <div class="mentor-sort">
+
+                            <label>
+                                Sort by
+                            </label>
+
+                            <select>
+
+                                <option>
+                                    Recommended
+                                </option>
+
+                                <option>
+                                    Highest Rated
+                                </option>
+
+                                <option>
+                                    Most Experienced
+                                </option>
+
+                                <option>
+                                    Recently Joined
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ==================================
+                         MENTOR CARD 1
+                         ================================== -->
+
+                    <div class="mentor-directory-card">
+
+                        <div class="mentor-card-main">
+
+
+                            <!-- Avatar -->
+
+                            <div class="directory-avatar avatar-blue">
+
+                                JS
+
+                                <span class="avatar-online"></span>
+
+                            </div>
+
+
+                            <!-- Details -->
+
+                            <div class="directory-details">
+
+                                <div class="directory-name-row">
+
+                                    <h3>
+                                        John Smith
+                                    </h3>
+
+                                    <span class="available-badge">
+
+                                        <i class="bi bi-circle-fill"></i>
+
+                                        Available
+
+                                    </span>
+
+                                </div>
+
+
+                                <p class="directory-role">
+
+                                    Senior .NET Developer
+                                </p>
+
+
+                                <div class="directory-meta">
+
+                                    <span>
+
+                                        <i class="bi bi-star-fill"></i>
+
+                                        <strong>4.9</strong>
+
+                                        (42 reviews)
+
+                                    </span>
+
+
+                                    <span>
+
+                                        <i class="bi bi-briefcase"></i>
+
+                                        10 Years
+
+                                    </span>
+
+
+                                    <span>
+
+                                        <i class="bi bi-people"></i>
+
+                                        85 Sessions
+
+                                    </span>
+
+                                </div>
+
+
+                                <p class="directory-about">
+
+                                    Senior software engineer specializing
+                                    in C#, .NET, Azure and enterprise
+                                    application development.
+
+                                </p>
+
+
+                                <div class="directory-skills">
+
+                                    <span>C#</span>
+
+                                    <span>.NET Core</span>
+
+                                    <span>ASP.NET</span>
+
+                                    <span>Azure</span>
+
+                                    <span>SQL Server</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Action -->
+
+                            <div class="directory-action">
+
+                                <span class="session-label">
+                                    Session
+                                </span>
+
+                                <strong>
+                                    Free
+                                </strong>
+
+                                <a asp-controller="Mentor"
+                                   asp-action="Details"
+                                   asp-route-id="1"
+                                   class="profile-button">
+
+                                    View Profile
+
+                                </a>
+
+                                <a asp-controller="Appointment"
+                                   asp-action="Book"
+                                   asp-route-mentorId="1"
+                                   class="book-button">
+
+                                    Book Appointment
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ==================================
+                         MENTOR CARD 2
+                         ================================== -->
+
+                    <div class="mentor-directory-card">
+
+                        <div class="mentor-card-main">
+
+                            <div class="directory-avatar avatar-purple">
+
+                                DK
+
+                                <span class="avatar-online"></span>
+
+                            </div>
+
+
+                            <div class="directory-details">
+
+                                <div class="directory-name-row">
+
+                                    <h3>
+                                        David Kumar
+                                    </h3>
+
+                                    <span class="available-badge">
+
+                                        <i class="bi bi-circle-fill"></i>
+
+                                        Available
+
+                                    </span>
+
+                                </div>
+
+
+                                <p class="directory-role">
+
+                                    Azure Cloud Architect
+
+                                </p>
+
+
+                                <div class="directory-meta">
+
+                                    <span>
+
+                                        <i class="bi bi-star-fill"></i>
+
+                                        <strong>4.8</strong>
+
+                                        (36 reviews)
+
+                                    </span>
+
+
+                                    <span>
+
+                                        <i class="bi bi-briefcase"></i>
+
+                                        12 Years
+
+                                    </span>
+
+
+                                    <span>
+
+                                        <i class="bi bi-people"></i>
+
+                                        110 Sessions
+
+                                    </span>
+
+                                </div>
+
+
+                                <p class="directory-about">
+
+                                    Cloud architect helping developers
+                                    and teams build scalable applications
+                                    using Microsoft Azure and DevOps.
+
+                                </p>
+
+
+                                <div class="directory-skills">
+
+                                    <span>Azure</span>
+
+                                    <span>DevOps</span>
+
+                                    <span>Docker</span>
+
+                                    <span>Kubernetes</span>
+
+                                    <span>Cloud</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="directory-action">
+
+                                <span class="session-label">
+                                    Session
+                                </span>
+
+                                <strong>
+                                    Free
+                                </strong>
+
+                                <a asp-controller="Mentor"
+                                   asp-action="Details"
+                                   asp-route-id="2"
+                                   class="profile-button">
+
+                                    View Profile
+
+                                </a>
+
+                                <a asp-controller="Appointment"
+                                   asp-action="Book"
+                                   asp-route-mentorId="2"
+                                   class="book-button">
+
+                                    Book Appointment
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ==================================
+                         MENTOR CARD 3
+                         ================================== -->
+
+                    <div class="mentor-directory-card">
+
+                        <div class="mentor-card-main">
+
+                            <div class="directory-avatar avatar-green">
+
+                                AM
+
+                                <span class="avatar-online"></span>
+
+                            </div>
+
+
+                            <div class="directory-details">
+
+                                <div class="directory-name-row">
+
+                                    <h3>
+                                        Alex Martin
+                                    </h3>
+
+                                    <span class="available-badge">
+
+                                        <i class="bi bi-circle-fill"></i>
+
+                                        Available
+
+                                    </span>
+
+                                </div>
+
+
+                                <p class="directory-role">
+
+                                    Full Stack Developer
+
+                                </p>
+
+
+                                <div class="directory-meta">
+
+                                    <span>
+
+                                        <i class="bi bi-star-fill"></i>
+
+                                        <strong>4.9</strong>
+
+                                        (51 reviews)
+
+                                    </span>
+
+
+                                    <span>
+
+                                        <i class="bi bi-briefcase"></i>
+
+                                        8 Years
+
+                                    </span>
+
+
+                                    <span>
+
+                                        <i class="bi bi-people"></i>
+
+                                        96 Sessions
+
+                                    </span>
+
+                                </div>
+
+
+                                <p class="directory-about">
+
+                                    Full stack developer helping developers
+                                    improve their JavaScript, React and
+                                    backend development skills.
+
+                                </p>
+
+
+                                <div class="directory-skills">
+
+                                    <span>React</span>
+
+                                    <span>JavaScript</span>
+
+                                    <span>Node.js</span>
+
+                                    <span>TypeScript</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="directory-action">
+
+                                <span class="session-label">
+                                    Session
+                                </span>
+
+                                <strong>
+                                    Free
+                                </strong>
+
+                                <a asp-controller="Mentor"
+                                   asp-action="Details"
+                                   asp-route-id="3"
+                                   class="profile-button">
+
+                                    View Profile
+
+                                </a>
+
+                                <a asp-controller="Appointment"
+                                   asp-action="Book"
+                                   asp-route-mentorId="3"
+                                   class="book-button">
+
+                                    Book Appointment
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ==================================
+                         MENTOR CARD 4
+                         ================================== -->
+
+                    <div class="mentor-directory-card">
+
+                        <div class="mentor-card-main">
+
+                            <div class="directory-avatar avatar-orange">
+
+                                RS
+
+                                <span class="avatar-online"></span>
+
+                            </div>
+
+
+                            <div class="directory-details">
+
+                                <div class="directory-name-row">
+
+                                    <h3>
+                                        Robert Silva
+                                    </h3>
+
+                                    <span class="available-badge">
+
+                                        <i class="bi bi-circle-fill"></i>
+
+                                        Available
+
+                                    </span>
+
+                                </div>
+
+
+                                <p class="directory-role">
+
+                                    Senior Data Engineer
+
+                                </p>
+
+
+                                <div class="directory-meta">
+
+                                    <span>
+
+                                        <i class="bi bi-star-fill"></i>
+
+                                        <strong>4.7</strong>
+
+                                        (29 reviews)
+
+                                    </span>
+
+
+                                    <span>
+
+                                        <i class="bi bi-briefcase"></i>
+
+                                        9 Years
+
+                                    </span>
+
+
+                                    <span>
+
+                                        <i class="bi bi-people"></i>
+
+                                        67 Sessions
+
+                                    </span>
+
+                                </div>
+
+
+                                <p class="directory-about">
+
+                                    Data engineer with experience in
+                                    SQL Server, Python, Azure Data Factory
+                                    and modern data platforms.
+
+                                </p>
+
+
+                                <div class="directory-skills">
+
+                                    <span>SQL Server</span>
+
+                                    <span>Python</span>
+
+                                    <span>Azure</span>
+
+                                    <span>Data Engineering</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="directory-action">
+
+                                <span class="session-label">
+                                    Session
+                                </span>
+
+                                <strong>
+                                    Free
+                                </strong>
+
+                                <a asp-controller="Mentor"
+                                   asp-action="Details"
+                                   asp-route-id="4"
+                                   class="profile-button">
+
+                                    View Profile
+
+                                </a>
+
+                                <a asp-controller="Appointment"
+                                   asp-action="Book"
+                                   asp-route-mentorId="4"
+                                   class="book-button">
+
+                                    Book Appointment
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Pagination -->
+
+                    <div class="mentor-pagination">
+
+                        <button disabled>
+
+                            <i class="bi bi-chevron-left"></i>
+
+                        </button>
+
+
+                        <button class="active">
+                            1
+                        </button>
+
+                        <button>
+                            2
+                        </button>
+
+                        <button>
+                            3
+                        </button>
+
+                        <span>
+                            ...
+                        </span>
+
+                        <button>
+                            8
+                        </button>
+
+
+                        <button>
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
