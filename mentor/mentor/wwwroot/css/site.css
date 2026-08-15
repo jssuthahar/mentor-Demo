@@ -717,3 +717,676 @@ a {
         gap: 10px;
     }
 }
+/* =========================================================
+   FIND MENTOR PAGE
+   ========================================================= */
+
+.mentor-directory {
+    background: #f8fafc;
+}
+
+/* Page Header */
+
+.mentor-page-header {
+    padding: 60px 0;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.directory-label {
+    color: #2563eb;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.mentor-page-header h1 {
+    max-width: 700px;
+    margin: 8px 0 12px;
+    color: #0f172a;
+    font-size: clamp(35px, 4vw, 48px);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    font-weight: 800;
+}
+
+    .mentor-page-header h1 span {
+        color: #2563eb;
+    }
+
+.mentor-page-header p {
+    max-width: 650px;
+    margin: 0;
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.mentor-count {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 20px 28px;
+    background: #eff6ff;
+    border: 1px solid #dbeafe;
+    border-radius: 14px;
+    text-align: left;
+}
+
+    .mentor-count strong {
+        color: #2563eb;
+        font-size: 30px;
+        line-height: 1;
+    }
+
+    .mentor-count span {
+        margin-top: 6px;
+        color: #64748b;
+        font-size: 12px;
+    }
+
+
+/* Search */
+
+.mentor-search-section {
+    padding: 28px 0;
+    background: #ffffff;
+}
+
+.mentor-search-box {
+    height: 58px;
+    display: flex;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 11px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+    overflow: hidden;
+}
+
+.mentor-search-input {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    gap: 12px;
+}
+
+    .mentor-search-input i {
+        color: #94a3b8;
+        font-size: 18px;
+    }
+
+    .mentor-search-input input {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        outline: 0;
+        color: #334155;
+        font-size: 14px;
+    }
+
+        .mentor-search-input input::placeholder {
+            color: #94a3b8;
+        }
+
+.mentor-search-button {
+    min-width: 125px;
+    border: 0;
+    background: #2563eb;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+    .mentor-search-button:hover {
+        background: #1d4ed8;
+    }
+
+.popular-mentor-search {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 13px;
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+    .popular-mentor-search a {
+        padding: 5px 10px;
+        background: #f1f5f9;
+        border-radius: 6px;
+        color: #475569;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+        .popular-mentor-search a:hover {
+            background: #eff6ff;
+            color: #2563eb;
+        }
+
+
+/* Directory */
+
+.mentor-directory-content {
+    padding: 40px 0 70px;
+}
+
+
+/* Filter */
+
+.mentor-filter-card {
+    position: sticky;
+    top: 20px;
+    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+}
+
+.filter-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .filter-header h3 {
+        margin: 0;
+        color: #0f172a;
+        font-size: 17px;
+        font-weight: 750;
+    }
+
+    .filter-header button {
+        border: 0;
+        background: transparent;
+        color: #2563eb;
+        font-size: 11px;
+        font-weight: 600;
+    }
+
+.mentor-filter-card hr {
+    margin: 18px 0;
+    border-color: #e2e8f0;
+}
+
+.filter-group {
+    margin-bottom: 25px;
+}
+
+    .filter-group:last-child {
+        margin-bottom: 0;
+    }
+
+    .filter-group h4 {
+        margin-bottom: 13px;
+        color: #334155;
+        font-size: 12px;
+        font-weight: 750;
+    }
+
+.filter-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    color: #64748b;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+    .filter-check input {
+        width: 15px;
+        height: 15px;
+        accent-color: #2563eb;
+    }
+
+    .filter-check span {
+        flex: 1;
+    }
+
+    .filter-check small {
+        color: #94a3b8;
+        font-size: 10px;
+    }
+
+.rating-filter i {
+    color: #f59e0b;
+    margin-right: 3px;
+}
+
+.show-more-filter {
+    margin-top: 5px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #2563eb;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* Result Header */
+
+.mentor-result-header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+    .mentor-result-header h2 {
+        margin: 0 0 5px;
+        color: #0f172a;
+        font-size: 22px;
+        font-weight: 800;
+    }
+
+    .mentor-result-header p {
+        margin: 0;
+        color: #64748b;
+        font-size: 12px;
+    }
+
+.mentor-sort {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+    .mentor-sort label {
+        color: #64748b;
+        font-size: 11px;
+    }
+
+    .mentor-sort select {
+        height: 38px;
+        padding: 0 30px 0 10px;
+        border: 1px solid #e2e8f0;
+        border-radius: 7px;
+        outline: 0;
+        background: white;
+        color: #334155;
+        font-size: 11px;
+    }
+
+
+/* Mentor Card */
+
+.mentor-directory-card {
+    margin-bottom: 15px;
+    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    transition: 0.2s;
+}
+
+    .mentor-directory-card:hover {
+        border-color: #bfdbfe;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        transform: translateY(-2px);
+    }
+
+.mentor-card-main {
+    display: flex;
+    gap: 20px;
+}
+
+
+/* Avatar */
+
+.directory-avatar {
+    width: 68px;
+    height: 68px;
+    flex: 0 0 68px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.avatar-blue {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.avatar-purple {
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+.avatar-green {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.avatar-orange {
+    background: #ffedd5;
+    color: #ea580c;
+}
+
+.avatar-online {
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    width: 13px;
+    height: 13px;
+    background: #22c55e;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+
+/* Mentor Details */
+
+.directory-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.directory-name-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+    .directory-name-row h3 {
+        margin: 0;
+        color: #0f172a;
+        font-size: 17px;
+        font-weight: 750;
+    }
+
+.available-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 7px;
+    background: #f0fdf4;
+    color: #16a34a;
+    border-radius: 5px;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+    .available-badge i {
+        font-size: 5px;
+    }
+
+.directory-role {
+    margin: 4px 0 10px;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.directory-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 11px;
+}
+
+    .directory-meta span {
+        color: #64748b;
+        font-size: 10px;
+    }
+
+    .directory-meta i {
+        margin-right: 4px;
+        color: #94a3b8;
+    }
+
+    .directory-meta span:first-child i {
+        color: #f59e0b;
+    }
+
+    .directory-meta strong {
+        color: #334155;
+    }
+
+.directory-about {
+    max-width: 650px;
+    margin-bottom: 13px;
+    color: #64748b;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.directory-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+    .directory-skills span {
+        padding: 5px 8px;
+        background: #f1f5f9;
+        border-radius: 5px;
+        color: #475569;
+        font-size: 9px;
+        font-weight: 600;
+    }
+
+
+/* Actions */
+
+.directory-action {
+    width: 135px;
+    flex: 0 0 135px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    border-left: 1px solid #e2e8f0;
+    padding-left: 18px;
+}
+
+.session-label {
+    color: #94a3b8;
+    font-size: 9px;
+}
+
+.directory-action > strong {
+    margin-bottom: 12px;
+    color: #0f172a;
+    font-size: 15px;
+}
+
+.profile-button,
+.book-button {
+    width: 100%;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.profile-button {
+    margin-bottom: 7px;
+    border: 1px solid #cbd5e1;
+    color: #334155;
+    background: white;
+}
+
+    .profile-button:hover {
+        background: #f8fafc;
+        color: #0f172a;
+    }
+
+.book-button {
+    background: #2563eb;
+    color: white;
+}
+
+    .book-button:hover {
+        background: #1d4ed8;
+        color: white;
+    }
+
+
+/* Pagination */
+
+.mentor-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 30px;
+}
+
+    .mentor-pagination button {
+        width: 34px;
+        height: 34px;
+        border: 1px solid #e2e8f0;
+        border-radius: 7px;
+        background: white;
+        color: #64748b;
+        font-size: 11px;
+    }
+
+        .mentor-pagination button:hover:not(:disabled),
+        .mentor-pagination button.active {
+            background: #2563eb;
+            border-color: #2563eb;
+            color: white;
+        }
+
+        .mentor-pagination button:disabled {
+            opacity: 0.4;
+        }
+
+    .mentor-pagination span {
+        color: #94a3b8;
+        font-size: 11px;
+    }
+
+
+/* =========================================================
+   FIND MENTOR - RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .mentor-page-header {
+        padding: 45px 0;
+    }
+
+    .mentor-count {
+        margin-top: 25px;
+    }
+
+    .mentor-filter-card {
+        position: static;
+    }
+
+    .mentor-card-main {
+        flex-wrap: wrap;
+    }
+
+    .directory-action {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        border-left: 0;
+        border-top: 1px solid #e2e8f0;
+        padding: 18px 0 0;
+        margin-top: 5px;
+        gap: 8px;
+    }
+
+        .directory-action > strong {
+            margin: 0 auto 0 0;
+        }
+
+    .session-label {
+        display: none;
+    }
+
+    .profile-button,
+    .book-button {
+        width: auto;
+        padding: 0 15px;
+        margin: 0;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .mentor-page-header h1 {
+        font-size: 34px;
+    }
+
+    .mentor-search-box {
+        height: auto;
+        flex-direction: column;
+        padding: 6px;
+    }
+
+    .mentor-search-input {
+        height: 48px;
+    }
+
+    .mentor-search-button {
+        height: 45px;
+    }
+
+    .mentor-result-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .mentor-sort {
+        width: 100%;
+    }
+
+        .mentor-sort select {
+            flex: 1;
+        }
+
+    .mentor-card-main {
+        gap: 14px;
+    }
+
+    .directory-avatar {
+        width: 55px;
+        height: 55px;
+        flex-basis: 55px;
+        font-size: 15px;
+    }
+
+    .directory-name-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .directory-meta {
+        gap: 8px;
+        flex-direction: column;
+    }
+
+    .directory-action {
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+
+        .directory-action > strong {
+            width: 100%;
+        }
+
+    .profile-button,
+    .book-button {
+        flex: 1;
+    }
+}
